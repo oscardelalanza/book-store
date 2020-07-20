@@ -1,4 +1,19 @@
+# Bookstore
+> In this project you will use React and Redux to build a very simple application. You will work in a real-world project
+> for a fictional company that requires your help. The project has been split into multiple milestones, and each milestone
+> has functional and technical requirements that you will need to implement.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Built With
+
+- JavaScript, CSS, HTML
+- Redux
+- React
+
+## Live Demo
+
+[Live Demo Link](https://rr-book-store.herokuapp.com)
 
 ## Available Scripts
 
@@ -42,27 +57,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
