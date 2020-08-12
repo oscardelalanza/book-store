@@ -1,6 +1,5 @@
 import React from 'react';
-
-const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+import { categories } from '../store';
 
 const BooksForm = () => (
   <div>
