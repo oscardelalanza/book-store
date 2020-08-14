@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import bookReducer from './reducers/books';
+import reducer from './reducers/index';
 
 export const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -44,4 +44,4 @@ const initialState = {
   ],
 };
 
-export default createStore(bookReducer, initialState);
+export default createStore(reducer, initialState);
