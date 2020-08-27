@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { categories } from '../store';
+import { createBook } from '../actions';
 
-export default class BooksForm extends React.Component {
+class BooksForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,6 +12,7 @@ export default class BooksForm extends React.Component {
       category: '',
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -18,6 +21,11 @@ export default class BooksForm extends React.Component {
     this.setState({
       [name]: value,
     });
+  }
+
+  handleSubmit(event) {
+    this.createBook(this.state);
+    event.preventDefault();
   }
 
   render() {
@@ -51,4 +59,13 @@ export default class BooksForm extends React.Component {
 BooksForm.prototypes = {
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
+  createBook: PropTypes.func.isRequired,
 };
+
+const mapDispatchToProps = dispatch => ({
+  createBook(book) {
+    dispatch(createBook(book));
+  },
+});
+
+export default connect(null, mapDispatchToProps)(BooksForm);
