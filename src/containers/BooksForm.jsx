@@ -21,6 +21,7 @@ class BooksForm extends React.Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();
     const { createBook } = this.props;
     const { title, category } = this.state;
     const book = {
@@ -36,8 +37,6 @@ class BooksForm extends React.Component {
         category: '',
       });
     }
-
-    event.preventDefault();
   }
 
   render() {
