@@ -30,13 +30,11 @@ class BooksForm extends React.Component {
       category,
     };
 
-    if (title && category) {
-      createBook(book);
-      this.setState({
-        title: '',
-        category: '',
-      });
-    }
+    createBook(book);
+    this.setState({
+      title: '',
+      category: '',
+    });
   }
 
   render() {
@@ -49,14 +47,14 @@ class BooksForm extends React.Component {
           <div>
             <label htmlFor="title">
               Title:
-              <input type="text" id="title" name="title" placeholder="Book Title" onChange={this.handleChange} value={title} />
+              <input type="text" id="title" name="title" placeholder="Book Title" onChange={this.handleChange} value={title} required />
             </label>
           </div>
           <div>
             <label htmlFor="category">
               Category:
-              <select id="category" name="category" value={category} onChange={this.handleChange}>
-                <option value={null} defaultValue>Select Category</option>
+              <select id="category" name="category" value={category} onChange={this.handleChange} required>
+                <option value="">Select Category</option>
                 {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
               </select>
             </label>
