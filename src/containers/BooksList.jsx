@@ -4,16 +4,18 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { removeBook } from '../actions';
 
-const BooksList = ({ books }) => (
+const BooksList = ({ books, removeBook }) => (
   <table>
     <thead>
-      <th>Book ID</th>
-      <th>Title</th>
-      <th>Category</th>
-      <th>Remove</th>
+      <tr>
+        <th>Book ID</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Remove</th>
+      </tr>
     </thead>
     <tbody>
-      {books.map(book => <Book key={book.id} book={book} />)}
+      {books.map(book => <Book key={book.id} book={book} removeBook={removeBook} />)}
     </tbody>
   </table>
 );
@@ -27,6 +29,7 @@ const mapDispatchToProps = dispatch => ({
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
