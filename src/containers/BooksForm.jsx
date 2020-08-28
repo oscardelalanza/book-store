@@ -57,7 +57,7 @@ class BooksForm extends React.Component {
             <label htmlFor="category">
               Category:
               <select id="category" name="category" value={category} onChange={this.handleChange}>
-                <option value={null} selected>Select Category</option>
+                <option value={null} defaultValue>Select Category</option>
                 {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
               </select>
             </label>
