@@ -5,12 +5,16 @@ import Book from '../components/Book';
 
 const BooksList = ({ books }) => (
   <table>
-    <tr>
-      <th>Book ID</th>
-      <th>Title</th>
-      <th>Category</th>
-    </tr>
-    {books.map(book => <Book key={book.id} book={book} />)}
+    <thead>
+      <tr>
+        <th>Book ID</th>
+        <th>Title</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      {books.map(book => <Book key={book.id} book={book} />)}
+    </tbody>
   </table>
 );
 const mapStateToProps = state => ({
