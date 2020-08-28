@@ -73,8 +73,4 @@ const mapDispatchToProps = dispatch => ({
   createBook: book => (dispatch(createBook(book))),
 });
 
-BooksForm.prototypes = {
-  createBook: PropTypes.any,
-};
-
 export default connect(null, mapDispatchToProps)(BooksForm);
