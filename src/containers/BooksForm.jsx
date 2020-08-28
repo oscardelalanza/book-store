@@ -28,7 +28,15 @@ class BooksForm extends React.Component {
       title,
       category,
     };
-    createBook(book);
+
+    if (title && category) {
+      createBook(book);
+      this.setState({
+        title: '',
+        category: '',
+      });
+    }
+
     event.preventDefault();
   }
 
