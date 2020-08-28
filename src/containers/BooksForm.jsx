@@ -17,14 +17,18 @@ class BooksForm extends React.Component {
 
   handleChange(event) {
     const { name, value } = event.target;
-
-    this.setState({
-      [name]: value,
-    });
+    this.setState({ [name]: value });
   }
 
   handleSubmit(event) {
-    this.createBook(this.state);
+    const { createBook } = this.props;
+    const { title, category } = this.state;
+    const book = {
+      id: Math.floor(Math.random() * 100),
+      title,
+      category,
+    };
+    createBook(book);
     event.preventDefault();
   }
 
@@ -34,7 +38,7 @@ class BooksForm extends React.Component {
     return (
       <div>
         <h3>Add New Book</h3>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="title">
               Title:
@@ -50,22 +54,21 @@ class BooksForm extends React.Component {
               </select>
             </label>
           </div>
+          <input type="submit" value="Create Book" />
         </form>
       </div>
     );
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  createBook: book => (dispatch(createBook(book))),
+});
+
 BooksForm.prototypes = {
+  createBook: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  createBook: PropTypes.func.isRequired,
 };
-
-const mapDispatchToProps = dispatch => ({
-  createBook(book) {
-    dispatch(createBook(book));
-  },
-});
 
 export default connect(null, mapDispatchToProps)(BooksForm);
