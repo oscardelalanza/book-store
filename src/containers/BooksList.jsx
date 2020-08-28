@@ -4,21 +4,28 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { removeBook } from '../actions';
 
-const BooksList = ({ books, removeBook }) => (
-  <table>
-    <thead>
-      <tr>
-        <th>Book ID</th>
-        <th>Title</th>
-        <th>Category</th>
-        <th>Remove</th>
-      </tr>
-    </thead>
-    <tbody>
-      {books.map(book => <Book key={book.id} book={book} removeBook={removeBook} />)}
-    </tbody>
-  </table>
-);
+const BooksList = ({ books, removeBook }) => {
+  const handleRemove = book => {
+    removeBook(book);
+  };
+
+  return (
+    <table>
+      <thead>
+        <tr>
+          <th>Book ID</th>
+          <th>Title</th>
+          <th>Category</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        {books.map(book => <Book key={book.id} book={book} removeBook={handleRemove} />)}
+      </tbody>
+    </table>
+  );
+};
+
 const mapStateToProps = state => ({
   books: state.books,
 });
