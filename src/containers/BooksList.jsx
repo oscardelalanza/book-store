@@ -14,9 +14,18 @@ const BooksList = ({ books, removeBook, filterChange, filter }) => {
     filterChange(category);
   };
 
+  const getBooks = () => {
+    if (filter === 'All') {
+      return books;
+    }
+
+    return books.filter(book => book.category === filter);
+  };
+
   return (
     <div>
       <CategoryFilter categoryFilter={handleFilterChange} />
+      <div>{filter}</div>
       <table>
         <thead>
           <tr>
@@ -27,7 +36,7 @@ const BooksList = ({ books, removeBook, filterChange, filter }) => {
           </tr>
         </thead>
         <tbody>
-          {books.map(book => <Book key={book.id} book={book} removeBook={handleRemove} />)}
+          {getBooks().map(book => <Book key={book.id} book={book} removeBook={handleRemove} />)}
         </tbody>
       </table>
     </div>
