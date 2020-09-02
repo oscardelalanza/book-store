@@ -42,7 +42,7 @@ const initialState = {
       category: categories[6],
     },
   ],
-  filter: 'all',
+  filter: 'All',
 };
 
 export default createStore(reducer, initialState);
