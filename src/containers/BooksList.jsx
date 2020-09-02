@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
 import { removeBook } from '../actions';
+import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = ({ books, removeBook }) => {
   const handleRemove = book => {
@@ -10,19 +11,22 @@ const BooksList = ({ books, removeBook }) => {
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Book ID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody>
-        {books.map(book => <Book key={book.id} book={book} removeBook={handleRemove} />)}
-      </tbody>
-    </table>
+    <div>
+      <CategoryFilter />
+      <table>
+        <thead>
+          <tr>
+            <th>Book ID</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          {books.map(book => <Book key={book.id} book={book} removeBook={handleRemove} />)}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
