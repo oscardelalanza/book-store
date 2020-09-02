@@ -10,7 +10,7 @@ const CategoryFilter = ({ categoryFilter }) => {
   return (
     <select name="" id="" onChange={handleFilterChange}>
       <option value="">All</option>
-      {categories.map(category => <option value="category" key={category}>{category}</option>)}
+      {categories.map(category => <option value={category} key={category}>{category}</option>)}
     </select>
   );
 };

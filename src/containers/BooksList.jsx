@@ -15,7 +15,7 @@ const BooksList = ({ books, removeBook, filterChange, filter }) => {
   };
 
   const getBooks = () => {
-    if (filter === 'All') {
+    if (filter === 'All' || filter === '') {
       return books;
     }
 
@@ -25,7 +25,6 @@ const BooksList = ({ books, removeBook, filterChange, filter }) => {
   return (
     <div>
       <CategoryFilter categoryFilter={handleFilterChange} />
-      <div>{filter}</div>
       <table>
         <thead>
           <tr>
