@@ -1,0 +1,16 @@
+@import '_fonts.scss';
+
+body {
+  background: #fafafa;
+}
+
+header {
+  height: 95px;
+
+  .title {
+    font-family: Montserrat, serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #0290ff
+  }
+}

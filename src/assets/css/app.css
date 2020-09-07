@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  src: url("../fonts/Montserrat-Bold.ttf"); }
+
+body {
+  background: #fafafa; }
+
+header {
+  height: 95px; }
+  header .title {
+    font-family: Montserrat, serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #0290ff; }
