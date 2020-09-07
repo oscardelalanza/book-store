@@ -7,7 +7,8 @@ body {
   background: #fafafa; }
 
 header {
-  height: 95px; }
+  height: 95px;
+  border: solid 1px #e8e8e8; }
   header .title {
     font-family: Montserrat, serif;
     font-weight: bold;
