@@ -23,7 +23,7 @@ const BooksList = ({ books, removeBook, filterChange, filter }) => {
   };
 
   return (
-    <div>
+    <div className="container">
       <CategoryFilter categoryFilter={handleFilterChange} />
       <table>
         <thead>
