@@ -42,7 +42,7 @@ class BooksForm extends React.Component {
 
     return (
       <div className="container books-form">
-        <h3 className="title mb-md-3">ADD NEW BOOK</h3>
+        <h3 className="title-form mb-md-3">ADD NEW BOOK</h3>
         <form className="form-inline mb-md-5" onSubmit={this.handleSubmit}>
           <div className="form-group col-md-7 pl-md-0">
             <input type="text" className="form-control w-100" id="title" name="title" placeholder="Book Title" onChange={this.handleChange} value={title} required />
