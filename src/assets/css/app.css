@@ -76,7 +76,8 @@ header {
   .books-list {
     width: 100%;
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    padding-bottom: 20px; }
     .books-list .filter {
       width: 100%; }
   thead tr {
@@ -87,15 +88,15 @@ header {
     margin-top: 20px; }
     .book .category {
       order: 1;
-      font-size: 12px !important; }
+      font-size: 14px !important; }
     .book .title {
       order: 2;
       font-size: 18px !important; }
     .book .id, .books-list .book .remove button {
       order: 3;
-      font-size: 12px !important; }
+      font-size: 14px !important; }
     .book .remove {
       order: 4; }
       .book .remove button {
         padding: 5px 0 5px 0;
-        font-size: 12px !important; } }
+        font-size: 14px !important; } }

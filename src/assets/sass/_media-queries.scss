@@ -25,6 +25,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 
     .filter {
       width: 100%;
@@ -44,7 +45,7 @@
 
     .category {
       order: 1;
-      font-size: 12px !important;
+      font-size: 14px !important;
     }
 
     .title {
@@ -54,7 +55,7 @@
 
     .id {
       order: 3;
-      font-size: 12px !important;
+      font-size: 14px !important;
     }
 
     .remove {
@@ -62,7 +63,7 @@
 
       button {
         padding: 5px 0 5px 0;
-        font-size: 12px !important;
+        font-size: 14px !important;
       }
     }
   }
