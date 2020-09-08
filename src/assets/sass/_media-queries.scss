@@ -67,4 +67,25 @@
       }
     }
   }
+
+  .books-form {
+    width: 100%;
+    padding: 0;
+
+    .title-form {
+      font-size: 18px !important;
+      margin: 20px;
+      padding: 0;
+    }
+
+    .form-group {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    input[type='submit'] {
+      width: 100%;
+      margin: 0 15px 20px 15px;
+    }
+  }
 }

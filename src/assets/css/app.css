@@ -99,4 +99,17 @@ header {
       order: 4; }
       .book .remove button {
         padding: 5px 0 5px 0;
-        font-size: 14px !important; } }
+        font-size: 14px !important; }
+  .books-form {
+    width: 100%;
+    padding: 0; }
+    .books-form .title-form {
+      font-size: 18px !important;
+      margin: 20px;
+      padding: 0; }
+    .books-form .form-group {
+      width: 100%;
+      margin-bottom: 20px; }
+    .books-form input[type='submit'] {
+      width: 100%;
+      margin: 0 15px 20px 15px; } }
