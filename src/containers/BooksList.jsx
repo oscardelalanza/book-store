@@ -23,11 +23,11 @@ const BooksList = ({ books, removeBook, filterChange, filter }) => {
   };
 
   return (
-    <div>
+    <div className="container books-list d-md-flex flex-md-wrap justify-content-md-end mt-md-3 mb-md-4">
       <CategoryFilter categoryFilter={handleFilterChange} />
-      <table>
+      <table className="container p-md-0 m-md-0">
         <thead>
-          <tr>
+          <tr className="d-md-none">
             <th>Book ID</th>
             <th>Title</th>
             <th>Category</th>
