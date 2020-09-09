@@ -55,4 +55,61 @@ header {
 .books-form .title-form {
   font-family: Montserrat, serif;
   font-size: 20px;
-  font-weight: bold;}
+  font-weight: bold;
+  color: #888; }
+
+@media screen and (max-width: 767px) {
+  body {
+    box-sizing: border-box; }
+  header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 20px; }
+    header .container {
+      margin: 20px;
+      padding: 0; }
+      header .container .title {
+        margin: 0;
+        padding: 0;
+        font-size: 24px; }
+  .books-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px; }
+    .books-list .filter {
+      width: 100%; }
+  thead tr {
+    display: none; }
+  .book {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px; }
+    .book .category {
+      order: 1;
+      font-size: 14px !important; }
+    .book .title {
+      order: 2;
+      font-size: 18px !important; }
+    .book .id, .books-list .book .remove button {
+      order: 3;
+      font-size: 14px !important; }
+    .book .remove {
+      order: 4; }
+      .book .remove button {
+        padding: 5px 0 5px 0;
+        font-size: 14px !important; }
+  .books-form {
+    width: 100%;
+    padding: 0; }
+    .books-form .title-form {
+      font-size: 18px !important;
+      margin: 20px;
+      padding: 0; }
+    .books-form .form-group {
+      width: 100%;
+      margin-bottom: 20px; }
+    .books-form input[type='submit'] {
+      width: 100%;
+      margin: 0 15px 20px 15px; } }
