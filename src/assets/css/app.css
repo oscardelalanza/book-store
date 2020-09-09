@@ -62,8 +62,7 @@ header .title {
   color: #121212;
 }
 
-.books-list .book .id,
-.books-list .book .remove button {
+.books-list .book .id, .books-list .book .remove button {
   font-family: RobotoSlab, serif;
   font-weight: 300;
   font-size: 14px;
@@ -81,87 +80,70 @@ header .title {
   body {
     box-sizing: border-box;
   }
-
   header {
     display: flex;
     align-items: center;
     height: 70px;
     margin-bottom: 20px;
   }
-
   header .container {
     margin: 20px;
     padding: 0;
   }
-
   header .container .title {
     margin: 0;
     padding: 0;
     font-size: 24px;
   }
-
   .books-list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 20px;
   }
-
   .books-list .filter {
     width: 100%;
   }
-
   .books-list thead tr {
     display: none;
   }
-
   .books-list .book {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
   }
-
   .books-list .book .category {
     order: 1;
     font-size: 14px !important;
   }
-
   .books-list .book .title {
     order: 2;
     font-size: 18px !important;
   }
-
-  .books-list .book .id,
-  .books-list .book .remove button {
+  .books-list .book .id, .books-list .book .remove button {
     order: 3;
     font-size: 14px !important;
   }
-
   .books-list .book .remove {
     order: 4;
   }
-
   .books-list .book .remove button {
     padding: 5px 0 5px 0;
     font-size: 14px !important;
   }
-
   .books-form {
     width: 100%;
     padding: 0;
   }
-
   .books-form .title-form {
     font-size: 18px !important;
     margin: 20px;
     padding: 0;
   }
-
   .books-form .form-group {
     width: 100%;
     margin-bottom: 20px;
   }
-
   .books-form input[type='submit'] {
     width: 100%;
     margin: 0 15px 20px 15px;
