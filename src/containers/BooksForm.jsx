@@ -41,25 +41,19 @@ class BooksForm extends React.Component {
     const { title, category } = this.state;
 
     return (
-      <div>
-        <h3>Add New Book</h3>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="title">
-              Title:
-              <input type="text" id="title" name="title" placeholder="Book Title" onChange={this.handleChange} value={title} required />
-            </label>
+      <div className="container books-form">
+        <h3 className="title-form mb-md-3">ADD NEW BOOK</h3>
+        <form className="form-inline mb-md-5" onSubmit={this.handleSubmit}>
+          <div className="form-group col-md-7 pl-md-0">
+            <input type="text" className="form-control w-100" id="title" name="title" placeholder="Book Title" onChange={this.handleChange} value={title} required />
           </div>
-          <div>
-            <label htmlFor="category">
-              Category:
-              <select id="category" name="category" value={category} onChange={this.handleChange} required>
-                <option value="">Select Category</option>
-                {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
-              </select>
-            </label>
+          <div className="form-group col-md-3">
+            <select id="category" className="form-control w-100" name="category" value={category} onChange={this.handleChange} required>
+              <option value="">Select Category</option>
+              {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
+            </select>
           </div>
-          <input type="submit" value="Create Book" />
+          <input type="submit" className="btn btn-primary col-md-2" value="Create Book" />
         </form>
       </div>
     );
