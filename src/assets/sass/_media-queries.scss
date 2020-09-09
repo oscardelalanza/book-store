@@ -30,40 +30,40 @@
     .filter {
       width: 100%;
     }
-  }
 
-  thead {
-    tr {
-      display: none;
-    }
-  }
-
-  .book {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-
-    .category {
-      order: 1;
-      font-size: 14px !important;
+    thead {
+      tr {
+        display: none;
+      }
     }
 
-    .title {
-      order: 2;
-      font-size: 18px !important;
-    }
+    .book {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
 
-    .id {
-      order: 3;
-      font-size: 14px !important;
-    }
-
-    .remove {
-      order: 4;
-
-      button {
-        padding: 5px 0 5px 0;
+      .category {
+        order: 1;
         font-size: 14px !important;
+      }
+
+      .title {
+        order: 2;
+        font-size: 18px !important;
+      }
+
+      .id {
+        order: 3;
+        font-size: 14px !important;
+      }
+
+      .remove {
+        order: 4;
+
+        button {
+          padding: 5px 0 5px 0;
+          font-size: 14px !important;
+        }
       }
     }
   }
